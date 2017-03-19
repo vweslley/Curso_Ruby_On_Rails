@@ -1,0 +1,11 @@
+
+//garante que a pagina esta pronta para rodar o java script
+$(function(){
+    $('#recipient-text').val('<%= @admin.email %>');
+    $('h4.modal-title').text('Enviar mensagem para <%= @admin.name %>');
+    $('#SendMailModal').modal();
+
+    $('#SendMailModal').on('shown.bs.modal', function () {
+    $('#subject-tex').focus()
+    })
+});
