@@ -63,6 +63,7 @@ namespace :dev do
         title: Faker::Lorem.sentence([2,3,4,5].sample),
         description: LeroleroGenerator.paragraph(Random.rand(3)),
         member: Member.first,
+        category: Category.all.sample,
         price: "#{Random.rand(500)},#{Random.rand(99)}",
         picture: File.new(Rails.root.join('Public', 'templates',
                 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
