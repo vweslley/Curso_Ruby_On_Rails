@@ -2,6 +2,10 @@ class Ad < ActiveRecord::Base
   belongs_to :member
   belongs_to :category
 
+  #Validates
+  validates :title, :description, :category, :picture, :finish_date, presence: true
+  validates :price, numericality: {greater_than: 0}
+
   #Gem PaperClip
   has_attached_file :picture, styles: { medium: "320x150>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
   #Valida a imagem
