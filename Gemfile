@@ -19,6 +19,8 @@ end
 gem 'rails-i18n'
 # Manage Procfile-based applications
 gem 'foreman'
+# jQuery UI for the Rails asset pipeline
+gem 'jquery-ui-rails'
 # Translation for the devise gem
 gem 'devise-i18n'
 # Flexible authentication solution for Rails with Warden
